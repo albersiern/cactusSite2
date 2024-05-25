@@ -1,0 +1,9 @@
+{
+  "name": "cactus",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/albersiern/cactusSite2.git",
+  "author": "Seyran <mellodia163@gmail.com>",
+  "license": "MIT",
+  "private": "true"
+}
