@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Poetsen+One&family=Reddit+Mono&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  background: linear-gradient(90deg, #195247, #90b779);
+  font-family: "Reddit Mono", monospace;
+}
+
+header {
+  width: 100%;
+  height: 120px;
+  color: aliceblue;
+  display: flex;
+}
+header .nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 50px;
+  font-family: "Reddit Mono", monospace;
+}
+header .nav .left_side {
+  width: 50%;
+  display: flex;
+}
+header .nav .left_side span {
+  display: flex;
+  width: 250px;
+  height: 50px;
+}
+header .nav .left_side span i {
+  font-size: 50px;
+}
+header .nav .left_side ul {
+  font-size: 20px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .nav .left_side ul :first-child {
+  list-style: none;
+}
+header .nav .left_side ul li {
+  padding-left: 5px;
+}
+header .nav .left_side ul li a {
+  text-decoration: none;
+  color: aliceblue;
+}
+header .nav .left_side ul .active {
+  color: #edbc4b;
+  position: relative;
+}
+header .nav .left_side ul .active::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 10px;
+  background-color: #edbc4b;
+  border-radius: 0 0 8px 8px;
+}
+header .nav .right_side i {
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 99;
+  transition: 0.3s;
+}
+header .nav .right_side .toggle_i {
+  display: none;
+}
+header .nav .right_side input {
+  opacity: 0;
+  padding: 10px;
+  background-color: transparent;
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+  border-radius: 50px;
+  outline: none;
+  border: none;
+  border: 2px solid #edbc4b;
+  z-index: 98;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 20px;
+  transition: 0.3s;
+  left: -185px;
+}
+header .nav .right_side .show_search {
+  opacity: 1;
+}
+header .nav .right_side .search_close {
+  display: none;
+}
+header .nav .right_side .toggle_c {
+  display: block;
+}
+header .nav .right_side .right_side-search {
+  position: absolute;
+  right: 250px;
+  width: 250px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  top: 40px;
+}
+header .nav .right_side .right_side-search span {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #edbc4b;
+  width: 80px;
+  border-radius: 8px;
+  padding: 5px 15px;
+}
+header .nav .right_side .right_side-btn-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 150px;
+  height: 120px;
+  background-color: #376147;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .nav .right_side .right_side-btn-menu i {
+  font-size: 50px;
+  cursor: pointer;
+}
+
+section {
+  display: flex;
+  position: relative;
+}
+section .left_side {
+  width: 50%;
+  height: 75vh;
+}
+section .left_side h3 {
+  color: #fff;
+  position: absolute;
+  top: 180px;
+  left: 100px;
+  text-transform: uppercase;
+}
+section .left_side h1 {
+  font-size: 200px;
+  text-transform: uppercase;
+  color: #fff;
+  position: absolute;
+  top: 200px;
+  left: 100px;
+}
+section .left_side p {
+  color: #fff;
+  position: absolute;
+  bottom: 310px;
+  left: 120px;
+}
+section .left_side .btn {
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  border: 2px solid #edbc4b;
+  width: 180px;
+  border-radius: 50px;
+  padding-right: 0;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 180px;
+  left: 120px;
+  padding: 10px;
+  padding-inline-start: 20px;
+  cursor: pointer;
+}
+section .left_side .btn i {
+  background-color: #edbc4b;
+  width: 43px;
+  height: 43px;
+  border-radius: 50px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
+  transition: 0.5s;
+  position: absolute;
+  right: -1px;
+}
+section .left_side .btn:hover i {
+  padding-left: 15px;
+}
+section .right_side {
+  width: 50%;
+  position: relative;
+}
+section .right_side .right_side-bgc {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 90%;
+  height: 100%;
+  border-top-left-radius: 50px;
+  background: linear-gradient(90deg, #d5eec7, #9cc484);
+}
+section .right_side .right_side-bgc img {
+  width: 650px;
+  position: absolute;
+  top: -200px;
+  left: -150px;
+  transform: scaleX(-1);
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  width: 85%;
+  height: 15vh;
+}
+footer .arrow {
+  color: #fff;
+  font-size: 60px;
+  position: absolute;
+  top: 50px;
+  left: -200px;
+}
+footer .cactus {
+  border-top-left-radius: 100px;
+  width: 20%;
+  background-color: #edbc4b;
+}
+footer .cactus img {
+  width: 350px;
+  position: absolute;
+  top: -30px;
+}
+footer .footer_text {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #1f3e2d;
+}
+footer .footer_text p {
+  font-size: 15px;
+  width: 400px;
+  color: #fff;
+}
+footer .footer_soc {
+  width: 20%;
+  background-color: #8ab074;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+footer .footer_soc i {
+  font-size: 40px;
+  color: #fff;
+}/*# sourceMappingURL=style.css.map */
